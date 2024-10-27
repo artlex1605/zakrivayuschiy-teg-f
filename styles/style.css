@@ -18,12 +18,12 @@
   margin-block: 102px;
   color: var(--color);
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wght' var(--wght);
   font-size: 1.125rem;
   background-color: var(--background-color);
   background-image: var(--gradient);
   background-size: cover;
   background-attachment: fixed;
+  font-variation-settings: 'wght' var(--wght);
   min-inline-size: 320px;
   min-block-size: 100dvb;
   inline-size: 100%;
@@ -129,8 +129,8 @@
 }
 
 .card__title {
-  font-variation-settings: 'wght' var(--accent-wght);
   padding: 6.5px 10px;
+  font-variation-settings: 'wght' var(--accent-wght);
 }
 
 .card__image-wrapper {
@@ -181,8 +181,8 @@
 
 .card__button-wrapper {
   display: flex;
-  align-items: center;
   justify-content: end;
+  align-items: center;
   column-gap: 8px;
   margin: 0px 25px 25px;
 }
@@ -329,6 +329,8 @@
 /* ------------------------------DIALOG------------------------------ */
 
 .dialog {
+  position: fixed;
+  inset: 0;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
@@ -350,11 +352,6 @@
   pointer-events: none;
 }
 
-.dialog {
-  position: fixed;
-  inset: 0;
-}
-
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
@@ -365,9 +362,10 @@
 
 .dialog__button {
   grid-column: span 2;
-  text-transform: uppercase;
+  padding-block: 11.5px;
+  inline-size: 100%;
   font-size: inherit;
-  padding: 11.5px 128px;
+  text-transform: uppercase;
 }
 
 /* ------------------------------FILTERS------------------------------ */
